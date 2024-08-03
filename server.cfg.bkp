@@ -14,7 +14,7 @@
 ## You CAN edit the following:
 endpoint_add_tcp "0.0.0.0:30120"
 endpoint_add_udp "0.0.0.0:30120"
-sv_maxclients 48
+sv_maxclients 5
 set steam_webApiKey "none"
 sets tags "default, deployer, qbcore, qb-core"
 
@@ -23,9 +23,9 @@ sv_licenseKey "cfxk_SQflP3rGZhSUN8GXAgly_3nqgSL"
 sv_hostname "Framevork built with QBCore Framework by JericoFx & Kakarot & Hamy!"
 sets sv_projectName "[QBCore Framework] Framevork"
 sets sv_projectDesc "An advanced FiveM RP framework including jobs, gangs, housing & more!"
-sets locale "en-US"
+sets locale "ua-UA"
 load_server_icon myLogo.png
-set sv_enforceGameBuild 2944
+set sv_enforceGameBuild 3095
 set mysql_connection_string "mysql://root:0451@localhost/QBCoreFramework_A21544?charset=utf8mb4"
 
 # Voice config
@@ -36,8 +36,16 @@ setr voice_defaultVolume 0.3
 setr voice_enableRadioAnim 1
 setr voice_syncData 1
 
+# OxLib
+setr ox:primaryColor blue
+setr ox:primaryShade 8
+setr ox:userLocales 1 # Allow users to select their locales using /ox_lib
+
+# ox_inv
+setr inventory:framework "qb"
+
 # QBCore locale config
-setr qb_locale "en"
+setr qb_locale "ru"
 
 # QBCore UseTarget
 setr UseTarget false
@@ -53,7 +61,10 @@ ensure baseevents
 
 # QBCore & Extra stuff
 ensure qb-core
+ensure ox_lib
+ensure illenium-appearance
 ensure [qb]
+ensure ox_inventory
 ensure [standalone]
 ensure [voice]
 ensure [defaultmaps]
@@ -65,6 +76,12 @@ add_principal identifier.discord:323806211935961088 group.admin #Ptaxa
 
 # Resources
 add_ace resource.qb-core command allow # Allow qb-core to execute commands
+
+#OxLib
+add_ace resource.ox_lib command.add_ace allow
+add_ace resource.ox_lib command.remove_ace allow
+add_ace resource.ox_lib command.add_principal allow
+add_ace resource.ox_lib command.remove_principal allow
 
 # Gods
 add_ace qbcore.god command allow # Allow all commands

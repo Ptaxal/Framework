@@ -28,3 +28,4 @@ files {
     'popgroups.ymt',
     'relationships.dat'
 }
+-- тесты

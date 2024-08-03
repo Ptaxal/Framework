@@ -105,6 +105,152 @@ Config.GlobalPlayerOptions = {
 }
 
 Config.Peds = {
+	-- Кураторская зона
+	[1] = {
+        model = `a_m_m_business_01`,
+        coords = vector4(-1267.17, -3002.61, -49.49, 177.72),
+        networked = false,
+        invincible = true,
+        blockevents = true,
+        freeze = true,
+        target = {
+            options = {
+                {
+                    type = "client",
+                    event = "qb-clothing:client:openMenu",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Меню одежды",
+                },
+            },
+            distance = 2.5
+        }
+    },
+	[2] = {
+        model = `a_m_m_business_01`,
+        coords = vector4(-1274.09, -3005.27, -49.49, 223.65),
+        networked = false,
+        invincible = true,
+        blockevents = false,
+        freeze = true,
+        target = {
+            options = {
+                {
+                    type = "client",
+                    event = "qb-clothing:client:openMenu",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Меню одежды",
+                },
+            },
+            distance = 2.5
+        }
+    },
+	[3] = {
+        model = `a_m_m_business_01`,
+        coords = vector4(-1260.65, -3004.44, -49.49, 143.61),
+        networked = false,
+        invincible = true,
+        blockevents = false,
+        freeze = true,
+        target = {
+            options = {
+                {
+                    type = "client",
+                    event = "qb-clothing:client:openMenu",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Меню одежды",
+                },
+            },
+            distance = 2.5
+        }
+    },
+	[4] = {
+        model = `s_m_m_doctor_01`,
+        coords = vector4(-1271.59, -3023.02, -49.49, 351.41),
+        nnetworked = false,
+        invincible = true,
+        blockevents = false,
+        freeze = true,
+        target = {
+            options = {
+                {
+                    type = "client",
+                    event = "hospital:client:Revive",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Мне плохо!",
+                },
+            },
+            distance = 2.5
+        }
+    },
+	[5] = {
+        model = `s_m_m_doctor_01`,
+        coords = vector4(-1263.72, -3023.59, -49.49, 16.29),
+        networked = false,
+        invincible = true,
+        blockevents = false,
+        freeze = true,
+        target = {
+            options = {
+                {
+                    type = "client",
+                    event = "hospital:client:Revive",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Мне плохо!",
+                },
+            },
+            distance = 2.5
+        }
+    },
+	-- Ambulance
+	[6] = {
+        model = `s_m_m_doctor_01`,
+        coords = vector4(310.82, -597.71, 42.29, 104.28),
+        networked = false,
+        invincible = true,
+        blockevents = true,
+		freeze = true,
+        scenario = 'WORLD_HUMAN_AA_COFFEE',
+    },
+	[7] = {
+        model = `s_m_m_paramedic_01`,
+        coords = vector4(306.23, -597.18, 42.29, 19.23),
+        networked = false,
+        invincible = true,
+        blockevents = true,
+		freeze = true,
+        scenario = 'WORLD_HUMAN_CLIPBOARD',
+		target = {
+            options = {
+                {
+                    type = "client",
+                    event = "qb-ambulancejob:checkin",
+                    icon = "fas fa-sign-in-alt",
+                    label = "Записатся на приём",
+                },
+            },
+            distance = 2.5
+        }
+    },
+    [8] = {
+        model = `s_m_y_cop_01`,
+        coords = vector4(441.13, -978.71, 29.69, 180.78),
+        networked = false,
+        invincible = true,
+        blockevents = false,
+		freeze = true,
+        scenario = 'WORLD_HUMAN_CLIPBOARD',
+		target = {
+            options = {
+                {
+                    type = "client",
+                    event = "ps-mdt:client:selfregister",
+                    icon = "fa-solid fa-gun",
+                    label = "Зарегестрировать оружие",
+                },
+            },
+            distance = 2.5
+        }
+    },
 
 }
 
